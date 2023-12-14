@@ -2,6 +2,8 @@ import React from "react";
 import VideoPlay from "./Components/VideoPlay";
 import VideosList from "./Components/VideosList";
 import SearchBar from "./Components/SearchBar";
+import './app.css';
+
 
 function App() {
   return (

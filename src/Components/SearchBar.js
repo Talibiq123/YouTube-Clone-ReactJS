@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
+import './searchbar.css';
+
 
 const SearchBar = () => {
     let [search, setSearch] = useState("");
@@ -23,7 +25,7 @@ const SearchBar = () => {
     }
 
     return (
-        <div>
+        <div className="searchbar">
             <input type="text" placeholder="Search" 
             onChange={(e) => setSearch(e.target.value)}
             />
