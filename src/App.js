@@ -1,18 +1,28 @@
-import React from "react";
-import VideoPlay from "./Components/VideoPlay";
-import VideosList from "./Components/VideosList";
+import React,{useState} from "react"; 
 import SearchBar from "./Components/SearchBar";
-import './app.css';
+import VideosList from "./Components/VideosList";
+import VideoPlay from "./Components/VideoPlay";
+import "./app.css";
+
+const App = () => {
+  let [videos,setVideos] = useState("")
+  let [selectedVideo,setSelectedVideo] = useState("")
+
+  // console.log(videos)
+  console.log(selectedVideo)
 
 
-function App() {
-  return (
+
+
+  return(
     <div>
-      <SearchBar />
-      <VideoPlay />
-      <VideosList />
+          <SearchBar  setVideos={setVideos}/> 
+          <div className="videos">
+            <VideoPlay  selectedVideo={selectedVideo}/>
+            <VideosList  videos={videos} setSelectedVideo={setSelectedVideo}/>
+          </div>
     </div>
-  );
+  )
 }
 
 export default App;
